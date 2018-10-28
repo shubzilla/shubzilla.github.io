@@ -1,7 +1,7 @@
 title: Shubzilla
 email: shubzilla@gmail.com
 description: Shubzilla - Artist
-baseurl: "http://shubzilla.github.io"
+baseurl: "https://shubzilla.github.io"
 localhost: 4000
 mainhost: "http://localhost:4000"
 url: "shubzilla.com"
