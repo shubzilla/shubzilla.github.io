@@ -1,0 +1,21 @@
+title: Shubzilla
+email: shubzilla@gmail.com
+description: Shubzilla - Artist
+baseurl: "http://shubzilla.github.io"
+localhost: 4000
+mainhost: "http://localhost:4000"
+url: "shubzilla.com"
+twitter_username: ""
+github_username:  ""
+
+# Build settings
+markdown: kramdown
+sass:
+    sass_dir: _sass
+plugins:
+  - jekyll-feed
+defaults:
+  - scope:
+      path: "assets/"
+    values:
+      image: true

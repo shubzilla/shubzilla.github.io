@@ -1,0 +1,96 @@
+{% include head.html %}
+<body>
+  <!-- Navbar -->
+	{% include navigation.html %}
+
+	<!-- Header -->
+  <header class="header">
+    <div class="header-image">
+      <img src="{{ "/assets/images/shublogo.png" | prepend: site.baseurl }}">
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Page Content -->
+    <body>
+
+      <div class="row" id="about">
+        <div class="col-xs-12 flex justify-center">
+        	<div class="section-container">
+        		{% assign post = site.categories.about.first %}
+            <h3 class="section-title">{{ post.title }}</h3>
+        		<p>{{ post.content }}</p>
+        	</div>
+        </div>
+      </div>
+
+      <div class="row" id="music">
+        <div class="col-xs-12 flex justify-center">
+          <div class="section-container">
+            {% assign post = site.categories.music.first %}
+            <h3 class="section-title">{{ post.title }}</h3>
+            <div class="content-container">
+              <ul>
+              {% for p in site.categories.music %}
+                <li>
+                  <img src="{{ p.img }}">
+                  <p>
+                    <a href="{{ p.link }}" target="_blank">
+                    {{ p.subtitle }}
+                    </a>
+                  </p>
+                </li>
+                {% endfor %}
+              </ul>              
+            </div>
+            <a href="https://shubzilla.bandcamp.com/" target="_blank">
+              <span>MORE</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="media">
+        <div class="col-xs-12 flex justify-center">
+          <div class="section-container">
+            {% assign post = site.categories.media.first %}
+            <h3 class="section-title">{{ post.title }}</h3>
+            <div class="content-container">
+              <ul>
+              {% for p in site.categories.media %}
+                <li>
+                  {{ p.content }}
+                  <p>{{ p.subtitle }}</p>
+                </li>
+                {% endfor %}
+              </ul>              
+            </div>
+            <a href="https://www.youtube.com/channel/UCudjfXlXNoAUm4MIreYmDuQ/featured" target="_blank">
+              <span>MORE</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </a>            
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="events">
+        <div class="col-xs-12 flex justify-center">
+          <div class="section-container">
+            {% assign post = site.categories.events.first %}
+            <h3 class="section-title">{{ post.title }}</h3>
+            <div class="content-container">
+              {% for p in site.categories.events %}
+              <div class="events">
+                <p>{{ p.time }} - {{ p.venue }} - {{ p.location }}</p>
+                <p><a href="{{ p.link }}" target="_blank">Purchase Tickets</a></p>
+              </div>
+              {% endfor %}
+            </div>           
+          </div>
+        </div>
+      </div>
+      
+    </body>
+  </div>
+{% include footer.html %}
