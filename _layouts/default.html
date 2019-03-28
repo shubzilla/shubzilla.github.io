@@ -33,12 +33,8 @@
               <ul>
               {% for p in site.categories.music %}
                 <li>
-                  <img src="{{ p.img }}">
-                  <p>
-                    <a href="{{ p.link }}" target="_blank">
-                    {{ p.subtitle }}
-                    </a>
-                  </p>
+		  <a href="{{ p.link }}" target="_blank"><img src="{{ p.img }}"></a>
+                  <p><a href="{{ p.link }}" target="_blank">{{ p.subtitle }}</a></p>
                 </li>
                 {% endfor %}
               </ul>              
@@ -83,7 +79,7 @@
               {% for p in site.categories.events %}
               <div class="events">
                 <p>{{ p.time }} - {{ p.venue }} - {{ p.location }}</p>
-                <p><a href="{{ p.link }}" target="_blank">Purchase Tickets</a></p>
+                <p><a href="{{ p.link }}" target="_blank">Event Site</a></p>
               </div>
               {% endfor %}
             </div>           
